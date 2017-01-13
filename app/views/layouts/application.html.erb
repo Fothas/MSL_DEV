@@ -18,19 +18,50 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to root_path, class: "navbar-brand" do %>
+          <%= link_to dashboard_path, class: "navbar-brand" do %>
             <i class ="fa fa-flask"></i>
             ALims
           <% end %>
+          
+          
         </div>
+       
+        <%= link_to dashboard_path, class: "navbar-right" do %>
+          User Management
+          <i class ="fa fa-user"></i>
+        <% end %>
+  
+        
+        
+        
         <div class="collapse navbar-collapse" id="main-nav-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "About", about_path %></li>
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customers <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Customer List</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Add New Customer</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">View Customer Data</a></li>
+              </ul>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sample Actions <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Add Samples</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Edit Folder</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Report Results</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Release Reports</a></li>
+              </ul>
+            <li><a href='#'>Book In Folder</a></li>
           </ul>
+
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
-    
 
     <%= yield %>
 

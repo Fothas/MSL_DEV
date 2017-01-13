@@ -3,6 +3,6 @@ class PagesController < ApplicationController
         render :layout => 'home_page'
     end
     
-    def about
+    def dashboard
     end
 end

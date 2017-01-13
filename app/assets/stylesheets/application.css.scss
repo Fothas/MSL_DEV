@@ -46,7 +46,8 @@ h1, h2, h3 {
 
 //Sets navbar text colours to White and hover/focus to aquamarine
 .navbar-default .navbar-nav > li > a, 
-.navbar-default .navbar-brand {
+.navbar-default .navbar-brand,
+.navbar-right{
     color: White;
     &:hover, &:focus {
       color: Aquamarine;
@@ -76,4 +77,29 @@ h1, h2, h3 {
   color: white;
   padding-top: 25px;
   padding-bottom: 50px;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+//Sets the navbar buttons into the center of the navbar
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+//Set padding and formatting for usermanagement 
+.navbar-right {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
 }
