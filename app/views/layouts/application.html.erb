@@ -22,17 +22,12 @@
             <i class ="fa fa-flask"></i>
             ALims
           <% end %>
-          
-          
         </div>
        
         <%= link_to dashboard_path, class: "navbar-right" do %>
           User Management
           <i class ="fa fa-user"></i>
         <% end %>
-  
-        
-        
         
         <div class="collapse navbar-collapse" id="main-nav-collapse">
           <ul class="nav navbar-nav">
@@ -64,6 +59,87 @@
     </nav>
 
     <%= yield %>
+    
+    <!--This is how you get the path e.g. /Dashboard-->
+    <p>
+      <%= request.fullpath %>
+    </p>
+    
+    
+    
+    
+    <!-- Button trigger modal -->
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
+        Launch Normal Form
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <button type="button" class="close" 
+                       data-dismiss="modal">
+                           <span aria-hidden="true">&times;</span>
+                           <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        Modal title
+                    </h4>
+                </div>
+                
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    
+                    <form role="form">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control"
+                          id="exampleInputEmail1" placeholder="Enter email"/>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control"
+                              id="exampleInputPassword1" placeholder="Password"/>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                            <input type="checkbox"/> Check me out
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    
+                    
+                </div>
+                
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default"
+                            data-dismiss="modal">
+                                Close
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        Save changes
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <!--Code for page footer-->
+    <div id="wrap">
+      <div id="main" class="container clear-top">
+        <p>Footer Content</p>
+      </div>
+    </div>
+    <footer class="footer">
+    </footer>
 
   </body>
 </html>
